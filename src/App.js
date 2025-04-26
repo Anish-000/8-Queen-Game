@@ -25,6 +25,18 @@ function App() {
         <div className="floating-queen queen6">
           <GlassQueen />
         </div>
+        <div className="floating-queen queen7">
+          <GlassQueen />
+        </div>
+        <div className="floating-queen queen8">
+          <GlassQueen />
+        </div>
+        <div className="floating-queen queen9">
+          <GlassQueen />
+        </div>
+        <div className="floating-queen queen10">
+          <GlassQueen />
+        </div>
       </div>
       <Chessboard />
     </div>
