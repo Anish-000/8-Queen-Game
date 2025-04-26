@@ -1,159 +1,201 @@
 .glass-queen {
-    position: relative;
-    width: 70%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.crown {
+  position: relative;
+  width: 60%;
+  height: 25%;
+  background: linear-gradient(135deg, 
+    rgba(155, 77, 202, 0.8),
+    rgba(107, 43, 154, 0.9)
+  );
+  border-radius: 50% 50% 0 0;
+  margin-top: 5%;
+  backdrop-filter: blur(5px);
+  box-shadow: 
+    inset 0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 15px rgba(155, 77, 202, 0.5);
+}
+
+.crown-top {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  height: 30%;
+  background: linear-gradient(135deg, 
+    rgba(155, 77, 202, 0.9),
+    rgba(107, 43, 154, 1)
+  );
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+}
+
+.crown-points {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.crown-points span {
+  width: 15%;
+  height: 15px;
+  background: linear-gradient(135deg,
+    rgba(155, 77, 202, 0.9),
+    rgba(107, 43, 154, 1)
+  );
+  border-radius: 50% 50% 0 0;
+  box-shadow: 0 0 10px rgba(155, 77, 202, 0.5);
+}
+
+.crown-ring {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 20%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+.neck {
+  width: 20%;
+  height: 15%;
+  background: linear-gradient(135deg,
+    rgba(155, 77, 202, 0.8),
+    rgba(107, 43, 154, 0.9)
+  );
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+
+.neck-detail {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+}
+
+.body {
+  position: relative;
+  width: 50%;
+  height: 40%;
+  background: linear-gradient(135deg,
+    rgba(155, 77, 202, 0.8),
+    rgba(107, 43, 154, 0.9)
+  );
+  border-radius: 30% 30% 10% 10%;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.body-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+}
+
+.body-detail {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  height: 60%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+.body-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(
+    to top,
+    rgba(255, 166, 102, 0.4),
+    transparent
+  );
+}
+
+.base {
+  width: 70%;
+  height: 10%;
+  background: linear-gradient(135deg,
+    rgba(155, 77, 202, 0.8),
+    rgba(107, 43, 154, 0.9)
+  );
+  border-radius: 10% 10% 30% 30%;
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+
+.base-ring {
+  position: absolute;
+  top: -100%;
+  left: 10%;
+  width: 80%;
+  height: 200%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+.base-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(255, 166, 102, 0.4),
+    transparent
+  );
+}
+
+/*.glass-queen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+  transform: skewX(-20deg);
+}
+
+@keyframes shimmer {
+  100% {
+    left: 200%;
   }
-  
-  .cross {
-    position: absolute;
-    top: 2%;
-    width: 15%;
-    height: 15%;
-    background: linear-gradient(135deg, #9b4dca, #6b2b9a);
-    clip-path: polygon(40% 0%, 60% 0%, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0% 60%, 0% 40%, 40% 40%);
-    z-index: 2;
-    filter: drop-shadow(0 0 5px rgba(155, 77, 202, 0.5));
-  }
-  
-  .crown {
-    position: relative;
-    width: 60%;
-    height: 22%;
-    background: linear-gradient(135deg, #9b4dca, #6b2b9a);
-    border-radius: 50% 50% 0 0;
-    margin-top: 15%;
-    filter: drop-shadow(0 0 10px rgba(155, 77, 202, 0.3));
-  }
-  
-  .crown-points {
-    position: absolute;
-    top: -20%;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .crown-points span {
-    width: 10%;
-    height: 12px;
-    background: linear-gradient(135deg, #9b4dca, #6b2b9a);
-    border-radius: 50% 50% 0 0;
-  }
-  
-  .neck {
-    width: 20%;
-    height: 12%;
-    background: linear-gradient(135deg, #9b4dca, #6b2b9a);
-    position: relative;
-  }
-  
-  .body {
-    position: relative;
-    width: 50%;
-    height: 35%;
-    background: linear-gradient(135deg, #9b4dca, #6b2b9a);
-    border-radius: 30% 30% 10% 10%;
-    overflow: hidden;
-  }
-  
-  .body-detail {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 80%;
-    height: 60%;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-  }
-  
-  .body-glow {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background: linear-gradient(to top, #ff9966, transparent);
-    opacity: 0.3;
-  }
-  
-  .base {
-    width: 65%;
-    height: 12%;
-    background: linear-gradient(135deg, #9b4dca, #6b2b9a);
-    border-radius: 10% 10% 30% 30%;
-    position: relative;
-  }
-  
-  .base-ring {
-    position: absolute;
-    top: -50%;
-    left: 10%;
-    width: 80%;
-    height: 100%;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-  }
-  
-  .glass-queen::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent
-    );
-    animation: shimmer 3s infinite;
-    transform: skewX(-20deg);
-  }
-  
-  @keyframes shimmer {
-    100% {
-      left: 200%;
-    }
-  }
-  
-  .glass-queen > * {
-    position: relative;
-  }
-  
-  .glass-queen > *::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      45deg,
-      transparent 20%,
-      rgba(255, 255, 255, 0.2) 45%,
-      rgba(255, 255, 255, 0.3) 50%,
-      rgba(255, 255, 255, 0.2) 55%,
-      transparent 80%
-    );
-  }
-  
-  @media screen and (max-width: 768px) {
-    .glass-queen {
-      width: 65%;
-      height: 65%;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .glass-queen {
-      width: 60%;
-      height: 60%;
-    }
-  }
+}*/
