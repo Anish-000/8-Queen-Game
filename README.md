@@ -5,7 +5,7 @@ This is a fun and interactive implementation of the classic 8 Queen Problem usin
 
 🚀 Features : 
 
-    🧩 Fully interactive 8x8 chessboard
+    🧩 Fully interactive 8x8 chessboard and responsive as well
 
     🧠 Game logic to check for valid queen placements
 
@@ -25,4 +25,4 @@ This is a fun and interactive implementation of the classic 8 Queen Problem usin
 
 The 8 Queen Problem is a famous puzzle in computer science and AI, often used to demonstrate backtracking algorithms. This project brings the problem into an interactive, visual form—making it both educational and fun.
 
-Click on the link and start playing : 
+Click on the link and start playing : https://8-queen-game.vercel.app/
