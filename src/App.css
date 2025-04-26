@@ -67,6 +67,31 @@
   animation: floatAnimation6 26s infinite ease-in-out;
 }
 
+/* Add these new queen classes after your existing queen6 */
+.queen7 {
+  top: 45%;
+  left: 5%;
+  animation: floatAnimation7 23s infinite ease-in-out;
+}
+
+.queen8 {
+  top: 85%;
+  left: 45%;
+  animation: floatAnimation8 27s infinite ease-in-out;
+}
+
+.queen9 {
+  top: 5%;
+  left: 85%;
+  animation: floatAnimation9 24s infinite ease-in-out;
+}
+
+.queen10 {
+  top: 50%;
+  left: 95%;
+  animation: floatAnimation10 26s infinite ease-in-out;
+}
+
 @keyframes floatAnimation1 {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
   25% { transform: translate(120px, 60px) rotate(90deg); }
@@ -101,6 +126,28 @@
 @keyframes floatAnimation6 {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
   50% { transform: translate(200px, -60px) rotate(-180deg); }
+}
+
+@keyframes floatAnimation7 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(250px, 100px) rotate(120deg); }
+  66% { transform: translate(-150px, 150px) rotate(240deg); }
+}
+
+@keyframes floatAnimation8 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-180px, -120px) rotate(-180deg); }
+}
+
+@keyframes floatAnimation9 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-100px, 200px) rotate(90deg); }
+  75% { transform: translate(-200px, -100px) rotate(270deg); }
+}
+
+@keyframes floatAnimation10 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-250px, -50px) rotate(180deg); }
 }
 
 .App::before {
